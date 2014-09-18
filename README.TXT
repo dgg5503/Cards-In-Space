@@ -1,12 +1,6 @@
-------------------------------------------------------------------------
-This is the project README file. Here, you should describe your project.
-Tell the reader (someone who does not know anything about this project)
-all he/she needs to know. The comments should usually include at least:
-------------------------------------------------------------------------
+This is a very primative game a couple of friends and I had made for our AP Computer Science final. At the time it seemed like things were going well but we hadn't put much time into the design phase in terms of both gameplay and structure. This resulted in messy code but it worked out in the end! I had so much fun working with my closest friends on this project with my friends that I can't wait to do it again in the real world hopefully with more organization next time :).
 
-PROJECT TITLE:
-PURPOSE OF PROJECT:
-VERSION or DATE:
-HOW TO START THIS PROJECT:
-AUTHORS:
-USER INSTRUCTIONS:
+Credits:
+Main Engine - Douglas G.
+GUI Engine - Austin C.
+Art Assets - George W.
