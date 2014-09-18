@@ -18,6 +18,7 @@ public class fighter extends ship
         turrets.add(new gunTurret());
         turrets.add(new standardLaser());
         turrets.add(new standardMissile());
+        setcap(6);
       //  turrets.add(new gunTurret(" "));
     }
     

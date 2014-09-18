@@ -13,8 +13,8 @@ public class railCannon extends gun
     {
         //should have 1turn delay
 
-        editAttack(22.0);
-        editAttackRate(1.0);
+        editAttack(1.0);
+        editAttackRate(22.0);
     }
   
 }

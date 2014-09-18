@@ -9,7 +9,7 @@ package cardsInSpace;
  */
 public class gunTurret extends gun
 {    
-    public gunTurret()
+     public gunTurret()
     {
         editAttack(2.0);
         editAttackRate(5.0);

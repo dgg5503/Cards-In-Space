@@ -14,7 +14,7 @@ public abstract class missile extends hardpoint
     public void init()
     {
         editType("missile");
-        editInstallTime(2);
+        editInstallTime(5);
     }
 }
 

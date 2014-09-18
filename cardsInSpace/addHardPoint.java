@@ -17,12 +17,13 @@ public class addHardPoint extends actionCard
     //be modified as a setup timer.
     private static Random gen = new Random();
     hardpoint h;
+    int type;
     
     public addHardPoint()
     {
         init();
         h = pickRandomHardpointType();
-        editTitle("Add Attachment - " + h.getName());
+        editTitle("Add Attachment " + h.getName());
         editDescription("Adds an attachment to your ship to deal extra damage!");
         editTurnDecay(h.returnInstallTime());
     }
@@ -30,6 +31,7 @@ public class addHardPoint extends actionCard
     public hardpoint pickRandomHardpointType()
     {
         int z = gen.nextInt(13);
+        type = z;
         switch(z)
         {
             case 0: return new standardLaser();
@@ -63,5 +65,10 @@ public class addHardPoint extends actionCard
         {
             modifyTurnDecay(-1);
         }
+    }
+    
+    public int returnType()
+    {
+        return type;
     }
 }

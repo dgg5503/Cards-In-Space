@@ -11,9 +11,17 @@ comment12.params=
 comment12.target=int\ sizeOfDeck()
 comment13.params=index
 comment13.target=card\ getCard(int)
-comment14.params=
-comment14.target=java.lang.String\ toString()
-comment14.text=\r\n\ \ \ \ public\ Deck\ getExpiredDeck()\ \r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(crdsToRemove.size()\ \=\=\ 0){return\ null;}\r\n\ \ \ \ \ \ \ \ return\ new\ Deck(crdsToRemove);\r\n}
+comment14.params=c
+comment14.target=void\ pickCard(card)
+comment15.params=
+comment15.target=void\ cardBack()
+comment16.params=
+comment16.target=void\ reset()
+comment17.params=
+comment17.target=java.util.ArrayList\ returnCards()
+comment17.text=\r\n\ \ \ \ public\ Deck\ getExpiredDeck()\ \r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(crdsToRemove.size()\ \=\=\ 0){return\ null;}\r\n\ \ \ \ \ \ \ \ return\ new\ Deck(crdsToRemove);\r\n}
+comment18.params=
+comment18.target=java.lang.String\ toString()
 comment2.params=passes
 comment2.target=void\ shuffle(int)
 comment2.text=\r\n\ \ \ \ public\ void\ fillDeck()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ int\ num;\r\n\ \ \ \ \ \ \ \ for(int\ i\ \=\ 0;\ i\ <\ 40;\ i++)\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ if(i\ %\ 2\ \=\=\ 0)\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //When\ number\ is\ even\ (half\ of\ all\ the\ numbers)\ then\ add\ one\ random\ passive.\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ num\ \=\ gen.nextInt(1);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ switch\ (num)\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ case\ 0\:\ deck.add(new\ defend());\ break;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //When\ number\ is\ not\ even\ (half\ of\ all\ the\ numbers)\ then\ add\ one\ random\ action.\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ num\ \=\ gen.nextInt(2);\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ switch\ (num)\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ case\ 0\:\ deck.add(new\ pieThrow());\ break;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ case\ 1\:\ deck.add(new\ attack());\ break;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n}
@@ -31,4 +39,4 @@ comment8.params=c
 comment8.target=void\ addCard(card)
 comment9.params=i\ c
 comment9.target=void\ addCard(int,\ card)
-numComments=15
+numComments=19

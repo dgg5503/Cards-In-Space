@@ -32,13 +32,12 @@ public class actionDeck extends Deck
         {
                 switch (z)
                 {
-                    case 0: addCard(new pieThrow()); z++; break;
-                    case 1: addCard(new attack()); z++; break;
+                    case 0: addCard(new fireAllLasers()); z++; break;
+                    case 1: addCard(new fireAllMissiles()); z++; break;
                     case 2: addCard(new fireEverything());z++;break;
-                    case 3: addCard(new fireAllMissiles()); z++; break;
-                    case 4: addCard(new fireAllLasers()); z++; break;
-                    case 5: addCard(new fireAllGuns()); z++; break;
-                    case 6: addCard(new addHardPoint()); z = 0; break;
+                    case 3: addCard(new defend()); z++; break;
+                    case 4 : addCard(new addHardPoint()); z++; break;                    
+                    case 5: addCard(new fireAllGuns()); z = 0; break;
                 }
         }
     }

@@ -19,6 +19,7 @@ public abstract class card
     private ship shipToRecieveAction;
     private ship shipToPerformAction;
     private int turnDecay = 0;
+    private boolean picked = false;
     
     public void editDescription(String newDescription)
     {
@@ -94,6 +95,26 @@ public abstract class card
     public String toString()
     {
         return type + " - " + title;
+    }
+    
+    public boolean status()
+    {
+        return picked;
+    }
+    
+    public void pick()
+    {
+        picked = true;
+    }
+    
+    public void reset()
+    {
+        picked = false;
+    }
+    
+    public int returnType()
+    {
+        return -1;
     }
     
     public abstract void mainAction();

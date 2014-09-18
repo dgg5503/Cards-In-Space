@@ -29,6 +29,16 @@ public class player
         //initPlayer();
     }
     
+    public void pickDeck()
+    {
+        playerDeck.cardBack();
+    }
+    
+    public void resetDeck()
+    {
+        playerDeck.reset();
+    }
+    
     /*
     public void initPlayer()
     {
@@ -43,13 +53,14 @@ public class player
         if(tmp instanceof passiveCard)
         {
             tmp.mainAction();
-            recDeck.removeCard(tmp);
+            recDeck.pickCard(tmp);
             //recDeck.transferCard(mainDeckRef, index);
         }
         
         if(tmp instanceof actionCard)
         {
-            recDeck.transferCard(playerDeck, index);
+            recDeck.pickCard(tmp);
+            playerDeck.addCard(tmp);
         }
     }
     
@@ -60,7 +71,7 @@ public class player
         playerDeck.transferCard(mainDeckRef, index);
     }
     
-    public Deck getPlayerDeck()
+    public Deck getDeck()
     {
         return playerDeck;
     }

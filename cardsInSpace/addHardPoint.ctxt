@@ -5,4 +5,6 @@ comment1.params=
 comment1.target=hardpoint\ pickRandomHardpointType()
 comment2.params=
 comment2.target=void\ mainAction()
-numComments=3
+comment3.params=
+comment3.target=int\ returnType()
+numComments=4

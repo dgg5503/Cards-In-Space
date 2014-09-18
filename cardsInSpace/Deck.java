@@ -196,6 +196,22 @@ public class Deck
         return deck.get(index);
     }
     
+    public void pickCard(card c)
+    {
+        c.pick();
+    }
+    
+    public void cardBack()
+    {
+        for(card c: deck)
+        c.pick();
+    }
+    
+    public void reset()
+    {
+        for(card c: deck)
+        c.reset();
+    }
     
     //Returns deck of expired cards only after fireActions has been called, otherwise null.
     //Will be over written once fireActions is called again.
@@ -205,6 +221,11 @@ public class Deck
         if(crdsToRemove.size() == 0){return null;}
         return new Deck(crdsToRemove);
     }*/
+    
+    public ArrayList<card> returnCards()
+    {
+        return deck;
+    }
     
     public String toString()
     {

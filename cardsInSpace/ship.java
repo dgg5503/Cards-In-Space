@@ -11,8 +11,14 @@ public abstract class ship
 {
     private double totalHealth; //[0, infinity]
     private double totalDefense; //[0, infinity] ??? decide on a max defense???
+    int hardpointcap;
     private String name;
     ArrayList<hardpoint> turrets = new ArrayList<hardpoint>();  //hardpoints on ship
+    
+    public void setcap(int c)
+    {
+        hardpointcap = c;
+    }
     
     public void editTotalHealth(double newHealth)
     {
@@ -88,12 +94,26 @@ public abstract class ship
     public void addHardpoints(hardpoint h)
     {
         //adds a hardpoint
+        if(turrets.size() < hardpointcap)
         turrets.add(h);
     }
     
     public void removeHardpoints(hardpoint h)
     {
         turrets.remove(h);
+    }
+    
+    public boolean vacant()
+    {
+        if(turrets.size() < hardpointcap)
+        return true;
+        
+        return false;
+    }
+    
+    public int numTurrets()
+    {
+        return turrets.size();
     }
     
     public ArrayList<hardpoint> returnHardpoints()

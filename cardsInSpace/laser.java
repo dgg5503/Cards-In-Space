@@ -14,6 +14,6 @@ public abstract class laser extends hardpoint
     public void init()
     {
         editType("laser");
-        editInstallTime(2);
+        editInstallTime(5);
     }
 }

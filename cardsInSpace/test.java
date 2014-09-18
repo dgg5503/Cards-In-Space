@@ -1,26 +1,45 @@
+package cardsInSpace;
+
 
 import java.awt.*;
 import javax.swing.*;
-import java.awt.Graphics2D;
+import java.lang.String;
+import java.awt.*;
+import javax.swing.*;
+import java.applet.Applet;  
+import java.awt.image.*; 
+import java.io.*; 
+import java.net.URL; 
+import javax.imageio.*; 
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.IOException;
+import java.io.InputStream;
 import java.applet.Applet;
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.geom.Ellipse2D;
+import java.util.Random;
+import java.awt.geom.*;
 import java.awt.event.*;
-
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.io.IOException;
+import java.io.InputStream;
+import javax.swing.JPanel;
 
 /**
- * Class viewer - write a description of the class here
+ * Class test - write a description of the class here
  * 
  * @author (your name) 
  * @version (a version number)
  */
-public class viewer extends JApplet
+public class test extends JApplet implements ActionListener
 {
-    JPanel buttonPanel;
-    
     // instance variables - replace the example below with your own
-    private final static double g = 9.8;
-    
-    
+    private int x;
+    Button b1;
+    Color c = Color. black;
      /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * has been loaded into the system. It is always called before the first 
@@ -32,12 +51,19 @@ public class viewer extends JApplet
         // including some versions of Netscape & Internet Explorer which do 
         // not allow access to the AWT system event queue which JApplets do 
         // on startup to check access. May not be necessary with your browser. 
-       JRootPane rootPane = this.getRootPane();    
-       rootPane.putClientProperty("defeatSystemEventQueueCheck", Boolean.TRUE);
-       buttonPanel = new JPanel();
+        JRootPane rootPane = this.getRootPane();    
+        rootPane.putClientProperty("defeatSystemEventQueueCheck", Boolean.TRUE);
+        setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
+        b1 = new Button("Choose this card");
+        add(b1);
+        b1.addActionListener(this);
         // provide any initialisation necessary for your JApplet
     }
 
+    public void actionPerformed(ActionEvent e)
+    {
+        c = Color.blue;
+    }
     /**
      * Called by the browser or applet viewer to inform this JApplet that it 
      * should start its execution. It is called after the init method and 
@@ -68,11 +94,15 @@ public class viewer extends JApplet
      */
     public void paint(Graphics g)
     {
-        Graphics2D g2 = (Graphics2D) g;
-        shape box = new box(200, 0, 10, 10);
-        box.draw(g2);
+        // simple text displayed on applet
+        g.setColor(c);
+        g.fillRect(0, 0, 200, 100);
+        g.setColor(Color.black);
+        g.drawString("Sample Applet", 20, 20);
+        g.setColor(Color.blue);
+        g.drawString("created by BlueJ", 20, 40);
     }
-       
+
     /**
      * Called by the browser or applet viewer to inform this JApplet that it
      * is being reclaimed and that it should destroy any resources that it

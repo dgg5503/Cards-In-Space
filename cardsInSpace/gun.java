@@ -14,6 +14,6 @@ public abstract class gun extends hardpoint
     public void init()
     {
         editType("gun");
-        editInstallTime(2);
+        editInstallTime(3);
     }
 }
